@@ -29,6 +29,7 @@ public class Sessao {
 		return horario;
 	}
 
+	
 	public void setHorario(LocalTime horario) {
 		this.horario = horario;
 	}

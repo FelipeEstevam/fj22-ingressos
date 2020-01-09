@@ -29,22 +29,20 @@ public class GerenciadorDeSessao {
 		}
 		return false;
 	}
-	
 
 private boolean horarioIsConflitante(Sessao sessaoExistente, Sessao sessaoNova) {
 	
-LocalDateTime
-LocalDateTime
-LocalDateTime
-LocalDateTime
-inicioSessaoExistente = getInicioSessaoComDiaDeHoje(sessaoExistente);
-terminoSessaoExistente = getTerminoSessaoComDiaDeHoje(sessaoExistente);
-inicioSessaoNova = getInicioSessaoComDiaDeHoje(sessaoNova);
-terminoSessaoNova = getTerminoSessaoComDiaDeHoje(sessaoNova);
+
+	LocalDateTime inicioSessaoExistente = getInicioSessaoComDiaDeHoje(sessaoExistente);
+	LocalDateTime terminoSessaoExistente = getTerminoSessaoComDiaDeHoje(sessaoExistente);
+	LocalDateTime inicioSessaoNova = getInicioSessaoComDiaDeHoje(sessaoNova);
+	LocalDateTime terminoSessaoNova = getTerminoSessaoComDiaDeHoje(sessaoNova);
+	
 boolean sessaoNovaTerminaAntesDaExistente = terminoSessaoNova.isBefore(inicioSessaoExiste
 nte);
 boolean sessaoNovaComecaDepoisDaExistente = terminoSessaoExistente.isBefore(inicioSessaoN
 ova);
+
 if (sessaoNovaTerminaAntesDaExistente || sessaoNovaComecaDepoisDaExistente) {
 return false;
 }

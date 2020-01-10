@@ -27,7 +27,7 @@ public class Sessao {
 	public Sessao() {
 	}
 
-	public Sessao(LocalTime horario, Filme filme, Sala sala) {
+	public Sessao( LocalTime horario, Filme filme, Sala sala) {
 
 		this.horario = horario;
 		
